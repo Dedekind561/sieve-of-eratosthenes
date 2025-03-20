@@ -1,0 +1,11 @@
+.grid {
+  border: 1px solid green;
+}
+
+.prime {
+  border: 3px solid red;
+}
+
+.marked {
+  background-color: red;
+}
