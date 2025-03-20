@@ -1,26 +1,12 @@
-import { memo } from "react";
-import "./Cell.css";
+import "../App.css";
 
 type CellProps = {
-  crossOutMultiples: Function;
   value: number;
   isMarked: boolean;
 };
 
-function Cell({ value, isMarked, crossOutMultiples }: CellProps) {
-  console.log(`Busy rendering Cell with value: ${value}`);
+export default function Cell({ value }: CellProps) {
+  console.log(`Busy rendering Cell component with value: ${value}`);
 
-  return (
-    <button
-      className={isMarked ? "marked" : ""}
-      onClick={() => {
-        console.log({ value }, "Cell.tsx level");
-        crossOutMultiples(value);
-      }}
-    >
-      {value}
-    </button>
-  );
+  return <button className="cell">{value}</button>;
 }
-
-export default memo(Cell);

@@ -1,15 +1,14 @@
-
-import './App.css';
-import Grid from './components/Grid';
+import Grid from "./components/Grid";
 
 function App() {
-
-
   return (
-    <>
-     <Grid />
-    </>
-  )
+    <div className="grid-container">
+      <nav className="nav-container">
+        <h1>Sieve of Erathosthenes!</h1>
+      </nav>
+      <Grid />
+    </div>
+  );
 }
 
-export default App
+export default App;
