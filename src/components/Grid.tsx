@@ -5,7 +5,7 @@ export default function Grid() {
   return (
     <>
       <div className="main-grid">
-        <Cell value={value} isMarked={false} />
+        <Cell value={1} isMarked={false} />
       </div>
     </>
   );
