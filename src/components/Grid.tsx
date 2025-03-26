@@ -2,14 +2,20 @@ import Cell from "./Cell";
 import "../App.css";
 import { useCallback, useState } from "react";
 
+type GridObj = {
+  value: number;
+  isMarked: boolean;
+  isPrime: boolean;
+};
+
 function setupGridNumbers() {
   return Array.from({ length: 100 }, (_, index) => {
-    return { value: index + 1, isMarked: false, isPrime: null };
+    return { value: index + 1, isMarked: false, isPrime: false };
   });
 }
 
 export default function Grid() {
-  const [numbers, setNumbers] = useState(setupGridNumbers);
+  const [numbers, setNumbers] = useState<GridObj[]>(setupGridNumbers);
 
   function markAsPrime(number: number) {
     // update state so that the number is marked as isPrime: true
